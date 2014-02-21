@@ -3214,7 +3214,7 @@ void AudioPolicyManagerBase::initializeVolumeCurves()
     for (int i = 0; i < AudioSystem::NUM_STREAM_TYPES; i++) {
         for (int j = 0; j < DEVICE_CATEGORY_CNT; j++) {
             mStreams[i].mVolumeCurve[j] =
-                    sVolumeProfiles[i][j];
+                    sVolumeProfiles[i > AUDIO_STREAM_TTS ? AUDIO_STREAM_TTS : i][j];
         }
     }
 
