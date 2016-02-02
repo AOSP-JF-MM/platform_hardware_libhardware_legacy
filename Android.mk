@@ -13,7 +13,7 @@ LOCAL_SHARED_LIBRARIES := libcutils liblog
 
 LOCAL_INCLUDES += $(LOCAL_PATH)
 
-LOCAL_CFLAGS  += -DQEMU_HARDWARE
+LOCAL_CFLAGS  += -DQEMU_HARDWARE -Wno-unused-parameter -Wno-gnu-designator
 QEMU_HARDWARE := true
 
 LOCAL_SHARED_LIBRARIES += libdl
