@@ -1064,8 +1064,7 @@ status_t AudioPolicyManagerBase::stopInput(audio_io_handle_t input)
         }
 
         AudioParameter param = AudioParameter();
-        // AUDIO_DEVICE_BIT_IN value allows to stop any audio input stream
-        param.addInt(String8(AudioParameter::keyRouting), AUDIO_DEVICE_BIT_IN);
+        param.addInt(String8(AudioParameter::keyRouting), 0);
         mpClientInterface->setParameters(input, param.toString());
         inputDesc->mRefCount = 0;
         return NO_ERROR;
