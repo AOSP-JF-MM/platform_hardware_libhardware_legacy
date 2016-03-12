@@ -545,7 +545,7 @@ protected:
         int mPhoneState;                                                    // current phone state
         AudioSystem::forced_config mForceUse[AudioSystem::NUM_FORCE_USE];   // current forced use configuration
 
-        StreamDescriptor mStreams[AUDIO_STREAM_CNT];                        // stream descriptors for volume control
+        StreamDescriptor mStreams[AudioSystem::NUM_STREAM_TYPES];           // stream descriptors for volume control
         String8 mA2dpDeviceAddress;                                         // A2DP device MAC address
         String8 mScoDeviceAddress;                                          // SCO device MAC address
         String8 mUsbOutCardAndDevice;                                       // USB audio ALSA card and device numbers:
