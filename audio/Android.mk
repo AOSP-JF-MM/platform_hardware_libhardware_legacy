@@ -12,6 +12,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_MODULE := libaudiohw_legacy
 LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := libmedia
 LOCAL_STATIC_LIBRARIES := libmedia_helper
 LOCAL_CFLAGS := -Wno-unused-parameter -Wno-gnu-designator
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../include
@@ -30,6 +31,7 @@ ifeq ($(AUDIO_POLICY_TEST),true)
   LOCAL_CFLAGS += -DAUDIO_POLICY_TEST
 endif
 
+LOCAL_SHARED_LIBRARIES := libmedia
 LOCAL_STATIC_LIBRARIES := libmedia_helper
 LOCAL_MODULE := libaudiopolicy_legacy
 LOCAL_MODULE_TAGS := optional
@@ -46,6 +48,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_SHARED_LIBRARIES := \
     libcutils \
+    libmedia \
     libutils \
     liblog
 
